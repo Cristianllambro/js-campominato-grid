@@ -4,32 +4,32 @@ const select = document.getElementById('difficulty');
 
 
 btnPlay.addEventListener('click', function() {
-    let options = select.querySelector('option');
+    let optionsSelector = select.querySelector('option');
+    container.innerHTML = '';
 
-    if (options.value == 'easy'){
+    if (optionsSelector.value == 'easy'){
 
-        let grillEasy = grill(49);
+        let gridEasy = grid(49);
 
-    } else if(options.value == 'medium'){
+    } else if(optionsSelector.value == 'medium'){
 
-        let grillMedium = grill(81);
+        let gridMedium = grid(81);
 
-    } else if (options.value == 'hard') {
+    } else if (optionsSelector.value == 'hard') {
 
-        let grillHard = grill(100);
+        let gridHard = grid(100);
     }
     
-    function grill (max){
-        for (let i = 1; i <= max; i++) {
-            let item = document.createElement('div');
-            item.classList.add('easy');
-            item.innerHTML = i;
-            container.append(item);
-        }
-    }
-    container.innerHTML = '';
 })
 
+function grid (max){
+    for (let i = 1; i <= max; i++) {
+        let item = document.createElement('div');
+        item.classList.add('easy');
+        item.innerHTML = i;
+        container.append(item);
+    }
+}
 
 
 
