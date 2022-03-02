@@ -5,11 +5,10 @@
 }
 
 nav{
-    height: 70px;
+    height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: bisque;
 }
 
 h2{
@@ -21,24 +20,61 @@ h2{
     padding-right: 5em;
 }
 
+#difficulty{
+    padding: 0 1rem 0 1rem;
+}
+
+#btn-play{
+    padding: 0 1rem 0 1rem;
+}
+
 .container{
     background-color: aquamarine;
 }
 
 .container-box{
-    width: 500px;
-    padding: 5rem 0 5rem 0;
+    width: 700px;
+    height: 85vh;
+    padding: 4em 0 4em 0;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
 
-.easy{
-    width: calc(100% / 7);
-    height: 70px;
-    border: 1px solid black;
+.box{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.easy{
+    width: calc(100% / 7);
+    height: 70px;
+}
+
+.medium{
+    width: calc(100% / 9);
+    height: 55px;
+}
+
+.hard {
+    width: calc(100% / 10);
+    height: 50px;
+}
+
+.bk-color{
+    background-color: #8ea1e1;
+}
+
+footer{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5em;
+}
+.foot a{
+    text-decoration: none;
 }

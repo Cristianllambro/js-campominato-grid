@@ -4,31 +4,38 @@ const select = document.getElementById('difficulty');
 
 
 btnPlay.addEventListener('click', function() {
-    let optionsSelector = select.querySelector('option');
     container.innerHTML = '';
-
-    if (optionsSelector.value == 'easy'){
-
-        let gridEasy = grid(49);
-
-    } else if(optionsSelector.value == 'medium'){
-
-        let gridMedium = grid(81);
-
-    } else if (optionsSelector.value == 'hard') {
-
-        let gridHard = grid(100);
-    }
     
+    if(select.value == 'easy'){
+        grid(49);
+    } else if(select.value == 'medium') {
+        grid(81);
+    } else if(select.value == 'hard') {
+        grid(100);
+    }
 })
 
 function grid (max){
+
     for (let i = 1; i <= max; i++) {
         let item = document.createElement('div');
-        item.classList.add('easy');
+        item.classList.add('box');
         item.innerHTML = i;
         container.append(item);
+
+        if(max == 49) {
+            item.classList.add('easy')
+        } else if (max == 81) {
+            item.classList.add('medium');
+        } else {
+            item.classList.add('hard');
+        }
+
+        item.addEventListener('click', function(){
+            item.classList.add('bk-color')
+        })
     }
+
 }
 
 
