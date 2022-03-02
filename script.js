@@ -6,3 +6,4 @@ for (let i = 1; i <= 100; i++) {
     item.classList.add('box');
     item.innerHTML = i;
 }
+//non funziona
