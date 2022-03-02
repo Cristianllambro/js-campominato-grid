@@ -33,9 +33,9 @@ h2{
     flex-wrap: wrap;
 }
 
-.box{
-    width: 50px;
-    height: 50px;
+.easy{
+    width: calc(100% / 7);
+    height: 70px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
